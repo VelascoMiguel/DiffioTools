@@ -1,0 +1,370 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "OldSchoolGrotesk";
+  src: url(../public/fonts/OldschoolGrotesk-NormalRegular.otf);
+}
+
+@font-face {
+  font-family: "OldSchoolGroteskLight";
+  src: url(../public/fonts/OldschoolGrotesk-NormalLight.otf);
+}
+
+@font-face {
+  font-family: "OldSchoolGrotesk1";
+  src: url(../public/fonts/OldschoolGrotesk-NormalBold.otf);
+}
+
+@layer base {
+  :root {
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 1rem;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  border-radius: 0.5rem;
+  border: 1px solid #fafafa;
+  height: 100vh;
+}
+
+.contentPage {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebarMenu {
+  height: 100%;
+  width: 15%;
+  border: 1px solid #e4e4e7;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  position: relative;
+}
+
+.contentSidebarMenu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  gap: 0.5vw;
+  padding: 1rem;
+  width: 100%;
+  border-bottom: 1px solid #e4e4e7;
+  align-items: center;
+  font-family: "OldSchoolGrotesk";
+  font-weight: bold;
+}
+
+.logo > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.logo > p {
+  font-size: 1.5rem;
+  line-height: 110%;
+  margin-top: 5px;
+}
+
+.pagesSidebar {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  font-family: "OldSchoolGrotesk";
+}
+
+.hrefSidebar {
+  display: flex;
+  gap: 0.5vw;
+  padding: 1rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.5rem;
+}
+
+.hrefSidebar > a {
+  display: flex;
+  gap: 0.5vw;
+  align-items: center;
+}
+
+.svgHrefSidebar {
+  width: 35px;
+  height: 35px;
+  padding: 0.5rem;
+  background-color: #0a0a0a;
+  border-radius: 50%;
+}
+
+.avatar {
+  padding: 0 0.7rem 0 0.7rem;
+}
+
+.contentAvatar {
+  padding: 0.7rem;
+  width: 100%;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.5rem;
+  background-color: #0a0a0a;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.dotAvatar {
+  width: 35px;
+  height: 35px;
+  background-color: #fafafa;
+  border-radius: 50%;
+}
+
+.logOutButton {
+  width: 100%;
+  padding: 0.7rem;
+
+  font-family: "OldSchoolGrotesk";
+}
+
+.logOutButton > button {
+  padding: 0.7rem;
+  width: 100%;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.5rem;
+  background-color: #ff3f55;
+  color: #fafafa;
+}
+
+/* Estilos Generales */
+
+.page {
+  width: 85%;
+  height: 100%;
+  border: 1px solid #e4e4e7;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding: 1rem;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.headPage {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  font-family: "OldSchoolGrotesk";
+  padding-top: 1rem;
+}
+
+.headPage > .breadCrumbAndAvatar > h2 {
+  font-size: 3rem;
+  line-height: 100%;
+}
+
+.headPage > p {
+  line-height: 100%;
+}
+
+/* Dashboard */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.resumeDashboard {
+  display: flex;
+  gap: 0.5vw;
+}
+
+.cardDashboard {
+  width: 25%;
+  font-family: "OldSchoolGrotesk";
+  border: 1px solid #e4e4e7;
+  border-radius: 0.5rem;
+}
+
+.nameCardDashboard {
+  font-size: 1.5rem;
+}
+
+.trafficChartAndRecentServices {
+  display: flex;
+  gap: 0.5vw;
+}
+
+.recentServices {
+  width: 50%;
+  font-family: "OldSchoolGrotesk";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.seeAllService {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a0a0a;
+  color: #fafafa;
+  padding: 0.7rem !important;
+}
+
+/* Traffic Chart */
+
+.trafficChart {
+  width: 50%;
+  padding: 1rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.5rem;
+  font-family: "OldSchoolGrotesk";
+}
+
+/* Services Page*/
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.tableServices {
+  width: 100%;
+  font-family: "OldSchoolGrotesk";
+  padding: 1rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.5rem;
+}
+
+/* Files Page */
+
+.svgFile {
+  width: 35px;
+  height: 35px;
+  padding: 0.5rem;
+  background-color: #0a0a0a;
+  border-radius: 0.5rem;
+  fill: white;
+}
+
+.fileCell {
+  display: flex;
+  gap: 0.5vw;
+  align-items: center;
+}
+
+/* Project Tracking */
+.tracker {
+  font-family: "OldSchoolGrotesk";
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.actualStage {
+  width: 25vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: #0a0a0a;
+  color: #fafafa;
+  border-radius: 50%;
+}
+
+.lineTracker {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #0a0a0a;
+  justify-content: space-between;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+  align-items: center;
+  margin-top: 0.5vh;
+}
+
+.dotStage {
+  width: 30px;
+  height: 30px;
+  background-color: #0a0a0a;
+  border-radius: 50%;
+}
+
+/* Contact Information */
+
+.contactInformationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  font-family: "OldSchoolGrotesk";
+  height: 100%;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.contactMethod {
+  display: flex;
+  gap: 0.5vw;
+  flex-direction: column;
+}
+
+.contactMethod > input {
+  min-width: 350px;
+  width: fit-content;
+  border: 1px solid #e4e4e7;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.inputsAndLabelsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.applyChangesContactForm {
+  min-width: 350px;
+  width: fit-content;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  background-color: #0a0a0a;
+  color: #fafafa;
+}
